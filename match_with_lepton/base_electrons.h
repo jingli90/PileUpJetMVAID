@@ -1,0 +1,292 @@
+//////////////////////////////////////////////////////////
+// This class has been automatically generated on
+// Fri Jul 17 09:50:28 2015 by ROOT version 6.02/05
+// from TTree t/t
+// found on file: /eos/uscms/store/group/lpcmbja/jingli/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/crab_jmevalidator746p2_150709/150709_160648/0000/output_mc_9.root
+//////////////////////////////////////////////////////////
+
+#ifndef base_electrons_h
+#define base_electrons_h
+
+#include <TROOT.h>
+#include <TChain.h>
+#include <TFile.h>
+
+// Header file for the classes stored in the TTree if any.
+#include "vector"
+#include "vector"
+#include "vector"
+#include "vector"
+#include "vector"
+#include "Math/GenVector/PtEtaPhiE4D.h"
+#include "map"
+
+// Fixed size dimensions of array or collections stored in the TTree if any.
+//const Int_t kMaxp4 = 1000;
+//const Int_t kMaxgen_p4 = 1000;
+#include "base.h" // put the size in to one file to avoid duplication
+
+class base_electrons {
+public :
+   TTree          *fChain;   //!pointer to the analyzed TTree or TChain
+   Int_t           fCurrent; //!current Tree number in a TChain
+
+   // Declaration of leaf types
+   std::vector<float>   *dz;
+   std::vector<float>   *d0;
+   std::vector<float>   *hOverE;
+   std::vector<float>   *dPhiIn;
+   std::vector<float>   *supercluster_phi;
+   std::vector<float>   *dEtaIn;
+   std::vector<float>   *photonIsoR03;
+   std::vector<float>   *neutralHadronIsoR03;
+   std::vector<bool>    *pass_conversion_veto;
+   //   std::vector<signed char> *gen_charge;
+   std::vector<std::map<std::string,bool> > *ids;
+   Int_t           p4_;
+   Float_t         p4_fCoordinates_fPt[kMaxp4];   //[p4_]
+   Float_t         p4_fCoordinates_fEta[kMaxp4];   //[p4_]
+   Float_t         p4_fCoordinates_fPhi[kMaxp4];   //[p4_]
+   Float_t         p4_fCoordinates_fE[kMaxp4];   //[p4_]
+   std::vector<float>   *full5x5_sigmaIetaIeta;
+   std::vector<float>   *relativeIsoR03_withEA;
+   Int_t           gen_p4_;
+   Float_t         gen_p4_fCoordinates_fPt[kMaxgen_p4];   //[gen_p4_]
+   Float_t         gen_p4_fCoordinates_fEta[kMaxgen_p4];   //[gen_p4_]
+   Float_t         gen_p4_fCoordinates_fPhi[kMaxgen_p4];   //[gen_p4_]
+   Float_t         gen_p4_fCoordinates_fE[kMaxgen_p4];   //[gen_p4_]
+   std::vector<float>   *chargedHadronIsoR03;
+   //   std::vector<signed char> *charge;
+   std::vector<float>   *y;
+   std::vector<bool>    *has_gen_particle;
+   std::vector<float>   *supercluster_eta;
+   std::vector<float>   *gen_y;
+   std::vector<float>   *photonIsoR04;
+   std::vector<float>   *puChargedHadronIsoR03;
+   std::vector<float>   *ooEmooP;
+   std::vector<float>   *relativeIsoR03_deltaBeta;
+   std::vector<float>   *relativeIsoR03;
+   std::vector<float>   *chargedHadronIsoR04;
+   std::vector<float>   *neutralHadronIsoR04;
+   std::vector<float>   *relativeIsoR04_deltaBeta;
+   std::vector<int>     *expected_missing_inner_hits;
+   std::vector<float>   *puChargedHadronIsoR04;
+   std::vector<float>   *relativeIsoR04;
+   std::vector<float>   *relativeIsoR04_withEA;
+
+   // List of branches
+   TBranch        *b_dz;   //!
+   TBranch        *b_d0;   //!
+   TBranch        *b_hOverE;   //!
+   TBranch        *b_dPhiIn;   //!
+   TBranch        *b_supercluster_phi;   //!
+   TBranch        *b_dEtaIn;   //!
+   TBranch        *b_photonIsoR03;   //!
+   TBranch        *b_neutralHadronIsoR03;   //!
+   TBranch        *b_pass_conversion_veto;   //!
+   //TBranch        *b_gen_charge;   //!
+   TBranch        *b_ids;   //!
+   TBranch        *b_p4_;   //!
+   TBranch        *b_p4_fCoordinates_fPt;   //!
+   TBranch        *b_p4_fCoordinates_fEta;   //!
+   TBranch        *b_p4_fCoordinates_fPhi;   //!
+   TBranch        *b_p4_fCoordinates_fE;   //!
+   TBranch        *b_full5x5_sigmaIetaIeta;   //!
+   TBranch        *b_relativeIsoR03_withEA;   //!
+   TBranch        *b_gen_p4_;   //!
+   TBranch        *b_gen_p4_fCoordinates_fPt;   //!
+   TBranch        *b_gen_p4_fCoordinates_fEta;   //!
+   TBranch        *b_gen_p4_fCoordinates_fPhi;   //!
+   TBranch        *b_gen_p4_fCoordinates_fE;   //!
+   TBranch        *b_chargedHadronIsoR03;   //!
+   //TBranch        *b_charge;   //!
+   TBranch        *b_y;   //!
+   TBranch        *b_has_gen_particle;   //!
+   TBranch        *b_supercluster_eta;   //!
+   TBranch        *b_gen_y;   //!
+   TBranch        *b_photonIsoR04;   //!
+   TBranch        *b_puChargedHadronIsoR03;   //!
+   TBranch        *b_ooEmooP;   //!
+   TBranch        *b_relativeIsoR03_deltaBeta;   //!
+   TBranch        *b_relativeIsoR03;   //!
+   TBranch        *b_chargedHadronIsoR04;   //!
+   TBranch        *b_neutralHadronIsoR04;   //!
+   TBranch        *b_relativeIsoR04_deltaBeta;   //!
+   TBranch        *b_expected_missing_inner_hits;   //!
+   TBranch        *b_puChargedHadronIsoR04;   //!
+   TBranch        *b_relativeIsoR04;   //!
+   TBranch        *b_relativeIsoR04_withEA;   //!
+
+   base_electrons(TTree *tree=0);
+   virtual ~base_electrons();
+   virtual Int_t    Cut(Long64_t entry);
+   virtual Int_t    GetEntry(Long64_t entry);
+   virtual Long64_t LoadTree(Long64_t entry);
+   virtual void     Init(TTree *tree);
+   virtual void     Loop();
+   virtual Bool_t   Notify();
+   virtual void     Show(Long64_t entry = -1);
+};
+
+#endif
+
+#ifdef base_electrons_cxx
+base_electrons::base_electrons(TTree *tree) : fChain(0) 
+{
+// if parameter tree is not specified (or zero), connect the file
+// used to generate this class and read the Tree.
+   if (tree == 0) {
+      TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("/eos/uscms/store/group/lpcmbja/jingli/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/crab_jmevalidator746p2_150709/150709_160648/0000/output_mc_9.root");
+      if (!f || !f->IsOpen()) {
+         f = new TFile("/eos/uscms/store/group/lpcmbja/jingli/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/crab_jmevalidator746p2_150709/150709_160648/0000/output_mc_9.root");
+      }
+      TDirectory * dir = (TDirectory*)f->Get("/eos/uscms/store/group/lpcmbja/jingli/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/crab_jmevalidator746p2_150709/150709_160648/0000/output_mc_9.root:/electrons");
+      dir->GetObject("t",tree);
+
+   }
+   Init(tree);
+}
+
+base_electrons::~base_electrons()
+{
+   if (!fChain) return;
+   delete fChain->GetCurrentFile();
+}
+
+Int_t base_electrons::GetEntry(Long64_t entry)
+{
+// Read contents of entry.
+   if (!fChain) return 0;
+   return fChain->GetEntry(entry);
+}
+Long64_t base_electrons::LoadTree(Long64_t entry)
+{
+// Set the environment to read one entry
+   if (!fChain) return -5;
+   Long64_t centry = fChain->LoadTree(entry);
+   if (centry < 0) return centry;
+   if (fChain->GetTreeNumber() != fCurrent) {
+      fCurrent = fChain->GetTreeNumber();
+      Notify();
+   }
+   return centry;
+}
+
+void base_electrons::Init(TTree *tree)
+{
+   // The Init() function is called when the selector needs to initialize
+   // a new tree or chain. Typically here the branch addresses and branch
+   // pointers of the tree will be set.
+   // It is normally not necessary to make changes to the generated
+   // code, but the routine can be extended by the user if needed.
+   // Init() will be called many times when running on PROOF
+   // (once per file to be processed).
+
+   // Set object pointer
+   dz = 0;
+   d0 = 0;
+   hOverE = 0;
+   dPhiIn = 0;
+   supercluster_phi = 0;
+   dEtaIn = 0;
+   photonIsoR03 = 0;
+   neutralHadronIsoR03 = 0;
+   pass_conversion_veto = 0;
+   //gen_charge = 0;
+   ids = 0;
+   full5x5_sigmaIetaIeta = 0;
+   relativeIsoR03_withEA = 0;
+   chargedHadronIsoR03 = 0;
+   //charge = 0;
+   y = 0;
+   has_gen_particle = 0;
+   supercluster_eta = 0;
+   gen_y = 0;
+   photonIsoR04 = 0;
+   puChargedHadronIsoR03 = 0;
+   ooEmooP = 0;
+   relativeIsoR03_deltaBeta = 0;
+   relativeIsoR03 = 0;
+   chargedHadronIsoR04 = 0;
+   neutralHadronIsoR04 = 0;
+   relativeIsoR04_deltaBeta = 0;
+   expected_missing_inner_hits = 0;
+   puChargedHadronIsoR04 = 0;
+   relativeIsoR04 = 0;
+   relativeIsoR04_withEA = 0;
+   // Set branch addresses and branch pointers
+   if (!tree) return;
+   fChain = tree;
+   fCurrent = -1;
+   fChain->SetMakeClass(1);
+
+   fChain->SetBranchAddress("dz", &dz, &b_dz);
+   fChain->SetBranchAddress("d0", &d0, &b_d0);
+   fChain->SetBranchAddress("hOverE", &hOverE, &b_hOverE);
+   fChain->SetBranchAddress("dPhiIn", &dPhiIn, &b_dPhiIn);
+   fChain->SetBranchAddress("supercluster_phi", &supercluster_phi, &b_supercluster_phi);
+   fChain->SetBranchAddress("dEtaIn", &dEtaIn, &b_dEtaIn);
+   fChain->SetBranchAddress("photonIsoR03", &photonIsoR03, &b_photonIsoR03);
+   fChain->SetBranchAddress("neutralHadronIsoR03", &neutralHadronIsoR03, &b_neutralHadronIsoR03);
+   fChain->SetBranchAddress("pass_conversion_veto", &pass_conversion_veto, &b_pass_conversion_veto);
+   //fChain->SetBranchAddress("gen_charge", &gen_charge, &b_gen_charge);
+   fChain->SetBranchAddress("ids", &ids, &b_ids);
+   fChain->SetBranchAddress("p4", &p4_, &b_p4_);
+   fChain->SetBranchAddress("p4.fCoordinates.fPt", p4_fCoordinates_fPt, &b_p4_fCoordinates_fPt);
+   fChain->SetBranchAddress("p4.fCoordinates.fEta", p4_fCoordinates_fEta, &b_p4_fCoordinates_fEta);
+   fChain->SetBranchAddress("p4.fCoordinates.fPhi", p4_fCoordinates_fPhi, &b_p4_fCoordinates_fPhi);
+   fChain->SetBranchAddress("p4.fCoordinates.fE", p4_fCoordinates_fE, &b_p4_fCoordinates_fE);
+   fChain->SetBranchAddress("full5x5_sigmaIetaIeta", &full5x5_sigmaIetaIeta, &b_full5x5_sigmaIetaIeta);
+   fChain->SetBranchAddress("relativeIsoR03_withEA", &relativeIsoR03_withEA, &b_relativeIsoR03_withEA);
+   fChain->SetBranchAddress("gen_p4", &gen_p4_, &b_gen_p4_);
+   fChain->SetBranchAddress("gen_p4.fCoordinates.fPt", gen_p4_fCoordinates_fPt, &b_gen_p4_fCoordinates_fPt);
+   fChain->SetBranchAddress("gen_p4.fCoordinates.fEta", gen_p4_fCoordinates_fEta, &b_gen_p4_fCoordinates_fEta);
+   fChain->SetBranchAddress("gen_p4.fCoordinates.fPhi", gen_p4_fCoordinates_fPhi, &b_gen_p4_fCoordinates_fPhi);
+   fChain->SetBranchAddress("gen_p4.fCoordinates.fE", gen_p4_fCoordinates_fE, &b_gen_p4_fCoordinates_fE);
+   fChain->SetBranchAddress("chargedHadronIsoR03", &chargedHadronIsoR03, &b_chargedHadronIsoR03);
+   //fChain->SetBranchAddress("charge", &charge, &b_charge);
+   fChain->SetBranchAddress("y", &y, &b_y);
+   fChain->SetBranchAddress("has_gen_particle", &has_gen_particle, &b_has_gen_particle);
+   fChain->SetBranchAddress("supercluster_eta", &supercluster_eta, &b_supercluster_eta);
+   fChain->SetBranchAddress("gen_y", &gen_y, &b_gen_y);
+   fChain->SetBranchAddress("photonIsoR04", &photonIsoR04, &b_photonIsoR04);
+   fChain->SetBranchAddress("puChargedHadronIsoR03", &puChargedHadronIsoR03, &b_puChargedHadronIsoR03);
+   fChain->SetBranchAddress("ooEmooP", &ooEmooP, &b_ooEmooP);
+   fChain->SetBranchAddress("relativeIsoR03_deltaBeta", &relativeIsoR03_deltaBeta, &b_relativeIsoR03_deltaBeta);
+   fChain->SetBranchAddress("relativeIsoR03", &relativeIsoR03, &b_relativeIsoR03);
+   fChain->SetBranchAddress("chargedHadronIsoR04", &chargedHadronIsoR04, &b_chargedHadronIsoR04);
+   fChain->SetBranchAddress("neutralHadronIsoR04", &neutralHadronIsoR04, &b_neutralHadronIsoR04);
+   fChain->SetBranchAddress("relativeIsoR04_deltaBeta", &relativeIsoR04_deltaBeta, &b_relativeIsoR04_deltaBeta);
+   fChain->SetBranchAddress("expected_missing_inner_hits", &expected_missing_inner_hits, &b_expected_missing_inner_hits);
+   fChain->SetBranchAddress("puChargedHadronIsoR04", &puChargedHadronIsoR04, &b_puChargedHadronIsoR04);
+   fChain->SetBranchAddress("relativeIsoR04", &relativeIsoR04, &b_relativeIsoR04);
+   fChain->SetBranchAddress("relativeIsoR04_withEA", &relativeIsoR04_withEA, &b_relativeIsoR04_withEA);
+   Notify();
+}
+
+Bool_t base_electrons::Notify()
+{
+   // The Notify() function is called when a new file is opened. This
+   // can be either for a new TTree in a TChain or when when a new TTree
+   // is started when using PROOF. It is normally not necessary to make changes
+   // to the generated code, but the routine can be extended by the
+   // user if needed. The return value is currently not used.
+
+   return kTRUE;
+}
+
+void base_electrons::Show(Long64_t entry)
+{
+// Print contents of entry.
+// If entry is not specified, print current entry
+   if (!fChain) return;
+   fChain->Show(entry);
+}
+Int_t base_electrons::Cut(Long64_t entry)
+{
+// This function may be called from Loop.
+// returns  1 if entry is accepted.
+// returns -1 otherwise.
+   return 1;
+}
+#endif // #ifdef base_electrons_cxx
